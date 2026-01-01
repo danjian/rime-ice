@@ -11,7 +11,7 @@ __include: rime_ice.schema.yaml:/
 
 schema:
   schema_id: t9
-  name: 仓·九宫格
+  name: 雾凇拼音·九宫格
   version: "2.0.0"
   author:
     - Dvel
@@ -26,6 +26,7 @@ engine:
     - ascii_composer
     - recognizer
     - key_binder
+    - lua_processor@*key_binder
     - speller
     - punctuator
     - selector
@@ -47,6 +48,10 @@ engine:
     - simplifier@emoji # Emoji
     - simplifier@traditionalize # 简繁切换
     - uniquifier # 去重
+    - lua_filter@*t9_preedit #拼音
+    - lua_filter@*remove_pinyin #去除候选词的拼音
+    - lua_filter@*is_in_user_dict
+
 
 translator:
   prism: t9
