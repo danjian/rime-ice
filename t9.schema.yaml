@@ -26,7 +26,6 @@ engine:
     - ascii_composer
     - recognizer
     - key_binder
-    - lua_processor@*key_binder
     - speller
     - punctuator
     - selector
