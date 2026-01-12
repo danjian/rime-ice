@@ -36,8 +36,8 @@ local function t9_preedit(input, env)
                     local clen = #cpart
                     if plen > 0 and clen > plen then
                         local main = string.sub(cpart, 1, plen)
-                        local extra = string.sub(cpart, plen + 1)
-                        preedits[i] = main .. "(" .. extra .. ")"
+                        --local extra = string.sub(cpart, plen + 1)
+                        preedits[i] = main --.. "(" .. extra .. ")"
                     else
                         preedits[i] = cpart
                     end
