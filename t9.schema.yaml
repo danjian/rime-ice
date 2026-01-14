@@ -42,7 +42,7 @@ engine:
     - script_translator
     - lua_translator@*date_translator # 时间、日期、星期
     - table_translator@custom_phrase # 自定义短语 custom_phrase_t9.txt
-    # - table_translator@melt_eng     # 英文输入
+    - table_translator@melt_eng # 英文输入
   filters:
     - simplifier@emoji # Emoji
     - simplifier@traditionalize # 简繁切换
@@ -62,6 +62,11 @@ translator:
   contextual_suggestions: true
   max_homophones: 7
   max_homographs: 7
+
+grammar:
+  language: wanxiang-lts-zh-hans
+  collocation_max_length: 10
+  collocation_min_length: 2
 
 # 自定义短语：custom_phrase_t9.txt
 # ⚠️ 编码要用数字

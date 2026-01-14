@@ -441,6 +441,11 @@ translator:
   max_homophones: 7
   max_homographs: 7
 
+grammar:
+  language: wanxiang-lts-zh-hans
+  collocation_max_length: 10
+  collocation_min_length: 2
+
 # 次翻译器，英文
 melt_eng:
   dictionary: melt_eng # 挂载词库 melt_eng.dict.yaml
